@@ -22,7 +22,23 @@ nav img{
     width: 90px;
 }
 
+nav{
+    background-color: whitesmoke;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
 
+.navs{
+    justify-content: space-between;
+}
+
+.gap{
+    gap: 40px;
+}
 
 nav li{
     list-style: none;
@@ -31,6 +47,8 @@ nav li{
 a{
     text-decoration: none;
     color: var(--accent-color-dark);
+    font-weight: 600;
+    font-size: 18px;
 }
 
 p{
@@ -44,5 +62,7 @@ p{
 }
 
 .container{
+    margin-inline: auto;
+    overflow: hidden;
     max-width: 1180px;
 }
