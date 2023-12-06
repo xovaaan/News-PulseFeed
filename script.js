@@ -62,6 +62,6 @@ async function fetchNews(query){
         const query = searchBox.value;
         if(!query) return;
         fetchNews(query);
-        selected.classList.remove("active");
+        selected?.classList.remove("active");
         selected = null;
      });
