@@ -45,10 +45,11 @@ nav li{
 }
 
 a{
+    transition: all 0.5s ease;
     text-decoration: none;
     color: var(--accent-color-dark);
     font-weight: 600;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 p{
@@ -65,4 +66,45 @@ p{
     margin-inline: auto;
     overflow: hidden;
     max-width: 1180px;
+}
+
+.links ul a:hover{
+    color: black;
+}
+
+.links ul a:active{
+    color: greenyellow;
+}
+
+.search {
+    height: 32px;
+    gap: 10px;
+}
+
+.search input{
+    width: 200px;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #bbd0e2;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search button{
+    padding: 6px 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--accent-color);
+    font-size: 15px;
+    font-family:  'Poppins', sans-serif;
+    color: white;
+    font-weight: 500;
+    transition: all 0.4s ease;
+}
+
+.search button:hover{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: none;
 }
