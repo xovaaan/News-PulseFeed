@@ -16,6 +16,7 @@
 body,html{
     font-family: 'Poppins', sans-serif;
     color: var(--primary-color);
+   
 }
 
 nav img{
@@ -41,15 +42,12 @@ nav{
 }
 
 nav li{
-    list-style: none;
-}
-
-a{
     transition: all 0.5s ease;
     text-decoration: none;
     color: var(--accent-color-dark);
     font-weight: 600;
     font-size: 19px;
+    list-style: none;
 }
 
 p{
@@ -68,11 +66,17 @@ p{
     max-width: 1180px;
 }
 
-.links ul a:hover{
+.links ul li:hover{
     color: black;
+    cursor: pointer;
 }
 
-.links ul a:active{
+.item.active{
+    color:black;
+
+}
+
+.links ul li:active{
     color: greenyellow;
 }
 
@@ -91,6 +95,7 @@ p{
     font-family: 'Poppins', sans-serif;
 }
 
+
 .search button{
     padding: 6px 25px;
     border-radius: 5px;
@@ -108,3 +113,47 @@ p{
     background-color: var(--primary-color);
     border: none;
 }
+
+main{
+    margin-top: 120px;
+    padding: 0 20px;
+}
+
+.cards{
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.card-header img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+
+}
+
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.card:hover{
+    background-color: #f9fdff;
+    box-shadow: 3px 3px 10px #d4ecff;
+    transform: translateY(-4px);
+}
+
+.content{
+    padding: 10px;
+}
+
+.source{
+    margin-block:  12px;
+}
+
