@@ -5,11 +5,21 @@ window.addEventListener("load", () =>
   fetchNews("AI")
 );
 
-async function fetchNews(query){
-    const response = await fetch(`${url}${query}&apiKey=${api}`);
-    const data = await response.json();
-    bindData(data.articles);
+async function fetchNews(query) {
+    try {
+        const response = await fetch(`${url}${query}&apiKey=${api}`);
+        const data = await response.json();
+
+        if (data.articles) {
+            bindData(data.articles);
+        } else {
+            console.error('No articles found in the response:', data);
+        }
+    } catch (error) {
+        console.error('Error fetching news:', error);
+    }
 }
+
 
     function bindData(articles){
         const container = document.querySelector('.cards');
