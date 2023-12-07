@@ -2,7 +2,7 @@ const api = "4b562f85a7c64ffd8553af59ad19e54c";
 const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", () =>
-  fetchNews("AI")
+  fetchNews("India")
 );
 
 async function fetchNews(query) {
